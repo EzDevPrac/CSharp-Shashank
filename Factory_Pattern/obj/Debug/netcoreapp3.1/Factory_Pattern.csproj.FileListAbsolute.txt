@@ -1,0 +1,13 @@
+c:\Users\ADMIN\Desktop\All Solutions\Factory_Pattern\bin\Debug\netcoreapp3.1\Factory_Pattern.exe
+c:\Users\ADMIN\Desktop\All Solutions\Factory_Pattern\bin\Debug\netcoreapp3.1\Factory_Pattern.deps.json
+c:\Users\ADMIN\Desktop\All Solutions\Factory_Pattern\bin\Debug\netcoreapp3.1\Factory_Pattern.runtimeconfig.json
+c:\Users\ADMIN\Desktop\All Solutions\Factory_Pattern\bin\Debug\netcoreapp3.1\Factory_Pattern.runtimeconfig.dev.json
+c:\Users\ADMIN\Desktop\All Solutions\Factory_Pattern\bin\Debug\netcoreapp3.1\Factory_Pattern.dll
+c:\Users\ADMIN\Desktop\All Solutions\Factory_Pattern\bin\Debug\netcoreapp3.1\Factory_Pattern.pdb
+c:\Users\ADMIN\Desktop\All Solutions\Factory_Pattern\obj\Debug\netcoreapp3.1\Factory_Pattern.csprojAssemblyReference.cache
+c:\Users\ADMIN\Desktop\All Solutions\Factory_Pattern\obj\Debug\netcoreapp3.1\Factory_Pattern.csproj.CoreCompileInputs.cache
+c:\Users\ADMIN\Desktop\All Solutions\Factory_Pattern\obj\Debug\netcoreapp3.1\Factory_Pattern.AssemblyInfoInputs.cache
+c:\Users\ADMIN\Desktop\All Solutions\Factory_Pattern\obj\Debug\netcoreapp3.1\Factory_Pattern.AssemblyInfo.cs
+c:\Users\ADMIN\Desktop\All Solutions\Factory_Pattern\obj\Debug\netcoreapp3.1\Factory_Pattern.dll
+c:\Users\ADMIN\Desktop\All Solutions\Factory_Pattern\obj\Debug\netcoreapp3.1\Factory_Pattern.pdb
+c:\Users\ADMIN\Desktop\All Solutions\Factory_Pattern\obj\Debug\netcoreapp3.1\Factory_Pattern.genruntimeconfig.cache
