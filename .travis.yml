@@ -1,4 +1,3 @@
 language: csharp
 solution: All_Solutions.sln
-install:
-  - nuget install xunit.runners -Version 2.4.1 -OutputDirectory testrunner
+
