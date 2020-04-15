@@ -1,0 +1,13 @@
+C:\Users\ADMIN\Desktop\All Solutions\Algorithms\solution2\bin\Debug\netcoreapp3.1\solution2.exe
+C:\Users\ADMIN\Desktop\All Solutions\Algorithms\solution2\bin\Debug\netcoreapp3.1\solution2.deps.json
+C:\Users\ADMIN\Desktop\All Solutions\Algorithms\solution2\bin\Debug\netcoreapp3.1\solution2.runtimeconfig.json
+C:\Users\ADMIN\Desktop\All Solutions\Algorithms\solution2\bin\Debug\netcoreapp3.1\solution2.runtimeconfig.dev.json
+C:\Users\ADMIN\Desktop\All Solutions\Algorithms\solution2\bin\Debug\netcoreapp3.1\solution2.dll
+C:\Users\ADMIN\Desktop\All Solutions\Algorithms\solution2\bin\Debug\netcoreapp3.1\solution2.pdb
+C:\Users\ADMIN\Desktop\All Solutions\Algorithms\solution2\obj\Debug\netcoreapp3.1\solution2.csprojAssemblyReference.cache
+C:\Users\ADMIN\Desktop\All Solutions\Algorithms\solution2\obj\Debug\netcoreapp3.1\solution2.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Desktop\All Solutions\Algorithms\solution2\obj\Debug\netcoreapp3.1\solution2.AssemblyInfoInputs.cache
+C:\Users\ADMIN\Desktop\All Solutions\Algorithms\solution2\obj\Debug\netcoreapp3.1\solution2.AssemblyInfo.cs
+C:\Users\ADMIN\Desktop\All Solutions\Algorithms\solution2\obj\Debug\netcoreapp3.1\solution2.dll
+C:\Users\ADMIN\Desktop\All Solutions\Algorithms\solution2\obj\Debug\netcoreapp3.1\solution2.pdb
+C:\Users\ADMIN\Desktop\All Solutions\Algorithms\solution2\obj\Debug\netcoreapp3.1\solution2.genruntimeconfig.cache
