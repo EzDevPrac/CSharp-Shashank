@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Builder_Pattern", "Builder_Pattern\Builder_Pattern.csproj", "{13ECE6B2-E2CE-4AF2-86BF-0D166F834EC0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Command_Pattern", "Command_Pattern_Example\Command_Pattern.csproj", "{F8C7BB32-7A0F-4939-9DB9-64F59F29CE19}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Command_Pattern", "Command_Pattern\Command_Pattern.csproj", "{876E7BAB-B922-4CFC-BC18-1EECA123DC06}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Builder_Pattern", "Builder_Pattern_Example\Builder_Pattern.csproj", "{F83B8F27-28EC-4127-8AD8-44D1A36F23F1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Factory_Pattern", "Factory_Pattern\Factory_Pattern.csproj", "{09ED9293-84A1-4A32-A704-B3718E6597E0}"
 EndProject
