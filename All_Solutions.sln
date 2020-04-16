@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solution1", "Algorithms\sol
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solution2", "Algorithms\solution2\solution2.csproj", "{828D4349-EA22-401E-9584-5648F2DFA20F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "factory_functions", "FactoryPattern.Testing\factory_functions.csproj", "{D8347D6B-E09C-451E-965C-BEE8C21C311C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
