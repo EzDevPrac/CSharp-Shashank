@@ -17,6 +17,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solution2", "Algorithms\sol
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "factory_functions", "FactoryPattern.Testing\factory_functions.csproj", "{D8347D6B-E09C-451E-965C-BEE8C21C311C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuilderPattern.Testing", "BuilderPattern.Testing\BuilderPattern.Testing.csproj", "{161F7A09-9758-4726-9301-ECD0468ED5DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandPattern.Testing", "CommandPattern.Testing\CommandPattern.Testing.csproj", "{F31F5B2D-58C1-46E2-8433-763323962642}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solution3", "Algorithms\solution3\solution3.csproj", "{CB78B110-804C-4BDB-9522-B20F8EB402E0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
