@@ -149,7 +149,7 @@ Moreover, builder pattern describes a way to separate an object from its constru
 
 The UML class diagram is as follows:
 
-![Builder Uml](https://user-images.githubusercontent.com/49721667/79696300-87e8a780-8299-11ea-961b-b0b539abb2ac.PNG)
+![Builder Uml](https://user-images.githubusercontent.com/49721667/79697207-11e73f00-829f-11ea-8f29-495fa59e5c55.png)
 
 Here is the description of above diagram:
 So what does Director, Builder, ConcreteBuilder and Product mean?? Answer is basically
