@@ -149,9 +149,7 @@ Moreover, builder pattern describes a way to separate an object from its constru
 
 The UML class diagram is as follows:
 
-
-
-![image](uploads/f446cc63d3027e9e891798321c94f4d7/image.png)
+![Builder Uml](https://user-images.githubusercontent.com/49721667/79696300-87e8a780-8299-11ea-961b-b0b539abb2ac.PNG)
 
 Here is the description of above diagram:
 So what does Director, Builder, ConcreteBuilder and Product mean?? Answer is basically
@@ -166,6 +164,10 @@ size of that toy etc…
 
 3. *Director* : is a class used to construct an object using builder interface. This class controls object
 creation process.
+
+Lets look at an UML example :
+
+![Builder implementation](https://user-images.githubusercontent.com/49721667/79697035-f0398800-829d-11ea-86ae-b5d7791251d4.PNG)
 
 To say builder pattern describes a way to separate an object from its construction. The same
 construction method can create a different representation of the object.
@@ -326,7 +328,7 @@ Console.ReadKey();
 
 The result of above code is shown below:
 
-![BuilderOutput](uploads/e2df53b4452acd76b01af4d24643f836/BuilderOutput.PNG)
+![Builder output new](https://user-images.githubusercontent.com/49721667/79696297-86b77a80-8299-11ea-8c91-0dd2b78d86d8.PNG)
 
 > Lets look at the advantages of builder pattern: 
 > 1.  It provides clear separation between the construction and representation of an object.
@@ -349,25 +351,24 @@ The complete code can be found in below link :
 Here command class means it says the commands. Receiver is, command that runs receiver, invoker keeps track of commands and finally client who decides what command to schedule.  
 
 Here is UML class diagram :
-
-
-![image](uploads/311af6c6be048d12efb1920ff44af6ee/image.png)
-
+![Builder Uml](https://user-images.githubusercontent.com/49721667/79696300-87e8a780-8299-11ea-961b-b0b539abb2ac.PNG)
 So from above diagram we have 
+
 1. *Command* : an interface which will define the methods to implement.
-2.  *Concretecommand * : the one which implements the command interface 
-3.  *Invoker* : responsible for processing the request, so this is suited when we implement redo and undo operations. 
+2. *Concretecommand* : the one which implements the command interface 
+3. *Invoker* : responsible for processing the request, so this is suited when we implement redo and undo operations. 
 4. *Reciever* :This is a class that performs the Action associated with the request.
 5. *Client* : This is the class that creates and executes the command object.
 
 Lets look at an example :
 
-![Commandp](uploads/c62d579f18daad32d5b808381af7192c/Commandp.PNG)
+![Commandp](https://user-images.githubusercontent.com/49721667/79695449-8c5e9180-8294-11ea-94e3-31cbf1205ce5.PNG)
 
 
-So if we look at the above diagram,1. *Switch* : Switch class is the one which will decide which command to execute that may turn off  and turn on.
-2. *ICommand* : an interface which has some methods to Execute i e .FlipUpCommand and FlipDownCommand. These methods have FlipUpCommand and FlipDownCommand to Execute.
-3. *Reciever* class is Light on which commands will be executed.
+So if we look at the above diagram,
+1. *Switch* : Switch class is the one which will decide which command to execute that may turn off  and turn on.
+2. *ICommand* : an interface which has some methods to Execute i e .FlipUpCommand and FlipDownCommand. These methods have FlipUpCommand       and FlipDownCommand to Execute.
+3. *Reciever* : class is Light on which commands will be executed.
 4. *FlipUpCommand and FlipDownCommand* : Concrete Command classes.
 
 Lets look at a snippet in which we take Turning on and off of light bulb as an example.
@@ -462,8 +463,8 @@ Console.ReadKey();
 
 The output is shown below:
 
-![comaop](uploads/d34709d38a2cd58ed7bb20fba4d4c6d6/comaop.PNG)
-![image](uploads/c5af682d74869a68106c22c86c9b4f92/image.png)
+![comaop](https://user-images.githubusercontent.com/49721667/79695454-8ff21880-8294-11ea-9ebc-3326076b7252.PNG)
+
 
 So what are the advantages of command pattern :
 
