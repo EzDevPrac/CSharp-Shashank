@@ -1,0 +1,13 @@
+C:\Users\ADMIN\Desktop\All_Solutions\Facade_design_Pattern\obj\Debug\netcoreapp3.1\Facade_Design_Pattern.csprojAssemblyReference.cache
+C:\Users\ADMIN\Desktop\All_Solutions\Facade_design_Pattern\obj\Debug\netcoreapp3.1\Facade_Design_Pattern.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Desktop\All_Solutions\Facade_design_Pattern\obj\Debug\netcoreapp3.1\Facade_Design_Pattern.AssemblyInfoInputs.cache
+C:\Users\ADMIN\Desktop\All_Solutions\Facade_design_Pattern\obj\Debug\netcoreapp3.1\Facade_Design_Pattern.AssemblyInfo.cs
+C:\Users\ADMIN\Desktop\All_Solutions\Facade_design_Pattern\bin\Debug\netcoreapp3.1\Facade_Design_Pattern.exe
+C:\Users\ADMIN\Desktop\All_Solutions\Facade_design_Pattern\bin\Debug\netcoreapp3.1\Facade_Design_Pattern.deps.json
+C:\Users\ADMIN\Desktop\All_Solutions\Facade_design_Pattern\bin\Debug\netcoreapp3.1\Facade_Design_Pattern.runtimeconfig.json
+C:\Users\ADMIN\Desktop\All_Solutions\Facade_design_Pattern\bin\Debug\netcoreapp3.1\Facade_Design_Pattern.runtimeconfig.dev.json
+C:\Users\ADMIN\Desktop\All_Solutions\Facade_design_Pattern\bin\Debug\netcoreapp3.1\Facade_Design_Pattern.dll
+C:\Users\ADMIN\Desktop\All_Solutions\Facade_design_Pattern\bin\Debug\netcoreapp3.1\Facade_Design_Pattern.pdb
+C:\Users\ADMIN\Desktop\All_Solutions\Facade_design_Pattern\obj\Debug\netcoreapp3.1\Facade_Design_Pattern.dll
+C:\Users\ADMIN\Desktop\All_Solutions\Facade_design_Pattern\obj\Debug\netcoreapp3.1\Facade_Design_Pattern.pdb
+C:\Users\ADMIN\Desktop\All_Solutions\Facade_design_Pattern\obj\Debug\netcoreapp3.1\Facade_Design_Pattern.genruntimeconfig.cache
