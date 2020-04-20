@@ -57,17 +57,19 @@ So from above figure,
 
 Now lets look at **code snippet: that defines Interface Ifactory**
 
-` public interface IFactory
+```
+public interface IFactory
  {
  void Drive(int miles);
  }
-`
+```
 so this is the Interface that defines drive methods that takes miles as parameters. 
 
 **below code implements Ifactory** :
 
 
-`public class Scooter : IFactory
+```
+public class Scooter : IFactory
  {
  public void Drive(int miles)
  {
@@ -80,20 +82,24 @@ so this is the Interface that defines drive methods that takes miles as paramete
  {
  Console.WriteLine("Drive the Bike : " + miles.ToString() + "km");
  }
- }`
+ }
+ ```
 
 This is code for that defines **vehicle Factory** :
 
-`public abstract class VehicleFactory
+```
+public abstract class VehicleFactory
  {
  public abstract IFactory GetVehicle(string Vehicle);
- }`
+ }
+ ```
  
 above method returns the vehicle object.
 
 Below snippets **implements the vehiclefactory** :
 
-` public class ConcreteVehicleFactory : VehicleFactory
+```
+public class ConcreteVehicleFactory : VehicleFactory
  {
  public override IFactory GetVehicle(string Vehicle)
  {
@@ -107,11 +113,13 @@ Below snippets **implements the vehiclefactory** :
  Console.WriteLine("Invalid",Vehicle);
  }
  }
-}`
+}
+```
 
 Here comes the **main class** :
 
-`class Program
+```
+class Program
  {
  static void Main(string[] args)
  {
@@ -123,7 +131,8 @@ IFactory bike = factory.GetVehicle("Bike");
 Console.ReadKey();
 }
  }
-}`
+}
+```
 
 
 The output of the above code is shown below: 
@@ -175,7 +184,8 @@ Lets look at the code:
 
 
 
-` public interface IVehicleBuilder
+```
+public interface IVehicleBuilder
 {
  void SetModel();
  void SetEngine();
@@ -184,7 +194,7 @@ Lets look at the code:
  void SetAccessories();
 Vehicle GetVehicle();
 }
-` 
+```
 
 
 The above code is the interface 
@@ -192,7 +202,8 @@ The above code is the interface
 
 Implementation of **concreteclass** is shown below: 
 
-`public class HeroBuilder : IVehicleBuilder
+```
+public class HeroBuilder : IVehicleBuilder
 {
  Vehicle objVehicle = new Vehicle();
  public void SetModel()
@@ -221,11 +232,12 @@ public Vehicle GetVehicle()
  return objVehicle;
  }
 }
-` 
+``` 
 
 The **concreteclass** snippet is shown below: 
 
-` public class HondaBuilder : IVehicleBuilder
+```
+public class HondaBuilder : IVehicleBuilder
 {
  Vehicle objVehicle = new Vehicle();
  public void SetModel()
@@ -255,11 +267,12 @@ public void SetBody()
  return objVehicle;
  }
 }
-`
+```
 
 The **Product class** is shown below: ``
 
-`public class Vehicle
+```
+public class Vehicle
 {
  public string Model { get; set; }
  public string Engine { get; set; }
@@ -282,11 +295,13 @@ public void ShowInfo()
  Console.WriteLine("\t{0}", accessory);
  }
  }
-}`
+}
+```
 
 Here is **Director class**:
 
-`public class VehicleCreator
+```
+public class VehicleCreator
 {
  private readonly IVehicleBuilder objBuilder;
  public VehicleCreator(IVehicleBuilder builder)
@@ -305,11 +320,13 @@ Here is **Director class**:
  {
  return objBuilder.GetVehicle();
  }
-}`
+}
+```
 
 here comes the **main class**: 
 
-`class Program
+```
+class Program
 {
  static void Main(string[] args)
  {
@@ -324,7 +341,8 @@ here comes the **main class**:
  vehicle.ShowInfo();
 Console.ReadKey();
  }
-}`
+}
+```
 
 The result of above code is shown below:
 
@@ -375,13 +393,17 @@ Lets look at a snippet in which we take Turning on and off of light bulb as an e
 
 Here is **Interface**:
 
-`public interface ICommand
+```
+public interface ICommand
 {
  void Execute();
-}`
+}
+```
  
 **Switch class** : this is invoker class
-`public class Switch
+
+```
+public class Switch
 {
  private List<ICommand> _commands = new List<ICommand>();
  public void StoreAndExecute(ICommand command)
@@ -389,11 +411,13 @@ Here is **Interface**:
  _commands.Add(command);
  command.Execute();
  }
-}`
+}
+```
 
 **Reciever** : This is light
 
-`public class Light
+```
+public class Light
 {
  public void TurnOn()
  {
@@ -403,12 +427,14 @@ public void TurnOff()
  {
  Console.WriteLine("The light is off");
  }
-}`
+}
+```
 
 **Icommand implementation**: this will recieve the command, i.e, Turn on or Off
 
 
-`public class FlipUpCommand : ICommand
+```
+public class FlipUpCommand : ICommand
 { 
  private Light _light;
  public FlipUpCommand(Light light)
@@ -431,11 +457,13 @@ public void Execute()
  {
  _light.TurnOff();
  }
-}` 
+}
+``` 
 
 **Main class** : which has client class that will decide which command to execute.
 
-`class Program
+```
+class Program
 {
  static void Main(string[] args)
  {
@@ -459,7 +487,8 @@ if (cmd == "ON")
  }
 Console.ReadKey();
  }
-}`
+}
+```
 
 The output is shown below:
 
@@ -479,3 +508,118 @@ when to use command pattern :
 > 3. Sending requests to different receivers which can handle it in different ways.
 
 The code can be found at :[Command Pattern](https://github.com/shashanks4/Command-Design-Pattern)
+
+Facade Design Pattern : This design pattern falls under Structural pattern. Facade pattern hides the complexities of system and provides an interface to the client, using which the client can access the system.(Here client refers the small piece of code nothing else).
+
+ >The Facade design pattern is particularly used when a system is very complex or difficult to understand because the system has a large >number of interdependent classes or its source code is unavailable.This pattern involves a single wrapper class which contains a set of >members which are required by the client. These members access the system on behalf of the facade client and hide the implementation >details.
+
+Lets look at the UML class diagram:
+
+![W3sDesign_Facade_Design_Pattern_UML](uploads/57ade6bea78b8945be49072f565e75d5/W3sDesign_Facade_Design_Pattern_UML.jpg)
+
+So from the above UML diagram we can say that Client class doesn't access the subsystem classess directly, instead it will ask Facade class. What that means is Facade is the one that will interact with all the sub-classes whcih has the various methods or functionalities. Client only depends on Facade not on entire system.
+
+Here, *Facade* : Is an Interface we can say or abstract class.
+*Client* : It is the one which requires something to be done.
+*Sub-classes* : These are some interdependent classes. This classes actually has all the methods. 
+
+lets take car as example and UML class diagram is shown below:
+
+![Facade_implementation](uploads/d83eb72bae87a1fe126df80075e7bc50/Facade_implementation.PNG)
+
+So what can we understand from above diagram ? the answer is 
+1. *CarFacade* : This is the facade class.
+2. *CarMethods, CarAccessories, CarModel and CarEngine* : These are the concrete class we can say that implements CarFacade.
+
+Lets look at the code,
+So if we look at the below code, these are all the **sub-classes** that implements Facade.
+
+```
+class CarBody
+    {
+        public void SetBody()
+        {
+            Console.WriteLine(" CarBody - SetBody");
+        }
+    }
+    class CarAccessories
+    {
+        public void SetAccessories()
+        {
+            Console.WriteLine(" CarAccessories - SetAccessories");
+        }
+    }
+  class CarEngine
+    {
+        public void SetEngine()
+        {
+            Console.WriteLine(" CarEngine - SetEngine");
+        }
+    }
+  class CarModel
+    {
+        public void SetModel()
+        {
+            Console.WriteLine(" CarModel - SetModel");
+        }
+    }
+```
+ 
+Now lets look at **Facade class** : 
+
+```
+public class CarFacade
+    {
+        private readonly CarAccessories accessories;
+        private readonly CarBody body;
+        private readonly CarEngine engine;
+        private readonly CarModel model;
+        public CarFacade()
+        {
+            accessories = new CarAccessories();
+            body = new CarBody();
+            engine = new CarEngine();
+            model = new CarModel();
+        }
+        public void CreateCompleteCar()
+        {
+            Console.WriteLine("******** Creating a Car **********");
+            model.SetModel();
+            engine.SetEngine();
+            body.SetBody();
+            accessories.SetAccessories();           
+        }
+    }
+```
+what can we understand from above code is Facade has control over the methods that its concrete class implements.
+
+Here is the **client** snippet:
+
+```
+class Program
+    {
+        static void Main(string[] args)
+        {
+            var facade = new CarFacade();
+            facade.CreateCompleteCar();
+            Console.ReadKey();
+        }
+    }
+}
+```
+
+here we are calling the facade object and getting the car.
+
+The output is here :
+
+![facade_op](uploads/b5fae30ddea9c5cfe1ade03979b0d184/facade_op.PNG)
+
+sofar we went through the facade design pattern, now lets look at when to use this pattern,
+
+> 1. The facade design pattern is particularly used when a system is very complex or difficult to understand because the system has a large number of interdependent classes or its source code is unavailable.
+> 2. A simple interface is required to access to a complex system.
+> 3. The abstractions and implementations of a subsystem are tightly coupled. 
+> 
+> Advantages are :
+> 1. It basically reduces the dependencies between libraries or other packages.
+> 2. It makes easier to use and maintain creating a more structured environment.
