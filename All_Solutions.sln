@@ -23,6 +23,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandPattern.Testing", "C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solution3", "Algorithms\solution3\solution3.csproj", "{CB78B110-804C-4BDB-9522-B20F8EB402E0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facade_Design_Pattern", "Facade_Design_Pattern\Facade_Design_Pattern.csproj", "{076E19A0-789A-48B8-B271-559CD55E950F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FacadePattern.Testing", "FacadePattern.Testing\FacadePattern.Testing.csproj", "{62995B24-9962-4729-9AED-489C31155EA0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
