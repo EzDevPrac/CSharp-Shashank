@@ -1,0 +1,13 @@
+C:\Users\ADMIN\Desktop\All_Solutions\Puzzle3\EdgeConditions\bin\Debug\netcoreapp3.1\EdgeConditions.exe
+C:\Users\ADMIN\Desktop\All_Solutions\Puzzle3\EdgeConditions\bin\Debug\netcoreapp3.1\EdgeConditions.deps.json
+C:\Users\ADMIN\Desktop\All_Solutions\Puzzle3\EdgeConditions\bin\Debug\netcoreapp3.1\EdgeConditions.runtimeconfig.json
+C:\Users\ADMIN\Desktop\All_Solutions\Puzzle3\EdgeConditions\bin\Debug\netcoreapp3.1\EdgeConditions.runtimeconfig.dev.json
+C:\Users\ADMIN\Desktop\All_Solutions\Puzzle3\EdgeConditions\bin\Debug\netcoreapp3.1\EdgeConditions.dll
+C:\Users\ADMIN\Desktop\All_Solutions\Puzzle3\EdgeConditions\bin\Debug\netcoreapp3.1\EdgeConditions.pdb
+C:\Users\ADMIN\Desktop\All_Solutions\Puzzle3\EdgeConditions\obj\Debug\netcoreapp3.1\EdgeConditions.csprojAssemblyReference.cache
+C:\Users\ADMIN\Desktop\All_Solutions\Puzzle3\EdgeConditions\obj\Debug\netcoreapp3.1\EdgeConditions.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Desktop\All_Solutions\Puzzle3\EdgeConditions\obj\Debug\netcoreapp3.1\EdgeConditions.AssemblyInfoInputs.cache
+C:\Users\ADMIN\Desktop\All_Solutions\Puzzle3\EdgeConditions\obj\Debug\netcoreapp3.1\EdgeConditions.AssemblyInfo.cs
+C:\Users\ADMIN\Desktop\All_Solutions\Puzzle3\EdgeConditions\obj\Debug\netcoreapp3.1\EdgeConditions.dll
+C:\Users\ADMIN\Desktop\All_Solutions\Puzzle3\EdgeConditions\obj\Debug\netcoreapp3.1\EdgeConditions.pdb
+C:\Users\ADMIN\Desktop\All_Solutions\Puzzle3\EdgeConditions\obj\Debug\netcoreapp3.1\EdgeConditions.genruntimeconfig.cache
