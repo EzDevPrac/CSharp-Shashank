@@ -27,6 +27,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facade_Design_Pattern", "Fa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FacadePattern.Testing", "FacadePattern.Testing\FacadePattern.Testing.csproj", "{62995B24-9962-4729-9AED-489C31155EA0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Puzzle3", "Puzzle3", "{34B286A6-B73C-4E73-877A-F08F9FEC4FB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdgeConditions", "Puzzle3\EdgeConditions\EdgeConditions.csproj", "{DA6857BD-E7B8-488C-820A-CE57D8F03D58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solution2", "Puzzle3\solution2\solution2.csproj", "{045BD944-D0F7-48C6-AFDA-92860CE8482E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
