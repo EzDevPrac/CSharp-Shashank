@@ -1,0 +1,13 @@
+C:\Users\ADMIN\Desktop\All_Solutions\singleton_pattern\ThreadSafe_withNoLocks\bin\Debug\netcoreapp3.1\ThreadSafe_withNoLocks.exe
+C:\Users\ADMIN\Desktop\All_Solutions\singleton_pattern\ThreadSafe_withNoLocks\bin\Debug\netcoreapp3.1\ThreadSafe_withNoLocks.deps.json
+C:\Users\ADMIN\Desktop\All_Solutions\singleton_pattern\ThreadSafe_withNoLocks\bin\Debug\netcoreapp3.1\ThreadSafe_withNoLocks.runtimeconfig.json
+C:\Users\ADMIN\Desktop\All_Solutions\singleton_pattern\ThreadSafe_withNoLocks\bin\Debug\netcoreapp3.1\ThreadSafe_withNoLocks.runtimeconfig.dev.json
+C:\Users\ADMIN\Desktop\All_Solutions\singleton_pattern\ThreadSafe_withNoLocks\bin\Debug\netcoreapp3.1\ThreadSafe_withNoLocks.dll
+C:\Users\ADMIN\Desktop\All_Solutions\singleton_pattern\ThreadSafe_withNoLocks\bin\Debug\netcoreapp3.1\ThreadSafe_withNoLocks.pdb
+C:\Users\ADMIN\Desktop\All_Solutions\singleton_pattern\ThreadSafe_withNoLocks\obj\Debug\netcoreapp3.1\ThreadSafe_withNoLocks.csprojAssemblyReference.cache
+C:\Users\ADMIN\Desktop\All_Solutions\singleton_pattern\ThreadSafe_withNoLocks\obj\Debug\netcoreapp3.1\ThreadSafe_withNoLocks.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Desktop\All_Solutions\singleton_pattern\ThreadSafe_withNoLocks\obj\Debug\netcoreapp3.1\ThreadSafe_withNoLocks.AssemblyInfoInputs.cache
+C:\Users\ADMIN\Desktop\All_Solutions\singleton_pattern\ThreadSafe_withNoLocks\obj\Debug\netcoreapp3.1\ThreadSafe_withNoLocks.AssemblyInfo.cs
+C:\Users\ADMIN\Desktop\All_Solutions\singleton_pattern\ThreadSafe_withNoLocks\obj\Debug\netcoreapp3.1\ThreadSafe_withNoLocks.dll
+C:\Users\ADMIN\Desktop\All_Solutions\singleton_pattern\ThreadSafe_withNoLocks\obj\Debug\netcoreapp3.1\ThreadSafe_withNoLocks.pdb
+C:\Users\ADMIN\Desktop\All_Solutions\singleton_pattern\ThreadSafe_withNoLocks\obj\Debug\netcoreapp3.1\ThreadSafe_withNoLocks.genruntimeconfig.cache
