@@ -7,6 +7,342 @@ Welcome to the CSharp-Shashank wiki!
                                                   
                                                   Design Patterns
                                      
+**Decorator Design Pattern**: Decorator design pattern falls under Structural Pattern of Gang of Four (GOF) Design Patterns in .Net.
+
+>Decorator pattern is used to add new functionality to an existing object without changing its structure. Hence Decorator pattern provides an alternative way to inheritance for modifying the behavior of an object. The decorator pattern is often useful for adhering to the Single Responsibility Principle, as it allows functionality to be divided between classes with unique areas of concern.The decorator pattern is structurally nearly identical to the chain of responsibility pattern, the difference being that in a chain of responsibility, exactly one of the classes handles the request, while for the decorator, all classes handle the request.
+
+Lets look at the UML class diagram:
+![Decorartor UML Imple](https://user-images.githubusercontent.com/49721667/80310492-a2220880-87f8-11ea-81e6-18048525bc7c.PNG)
+
+So what can be understood from above diagram, lets see.
+1. *Component* : This is an interface containing members that will be implemented by ConcreteClass and Decorator.
+
+2. *ConcreteComponent*: This is a class which implements the Component interface.
+
+3. *Decorator*: This is an abstract class which implements the Component interface and contains the reference to a Component instance. This class also acts as base class for all decorators for components.
+
+4. *ConcreteDecorator*: This is a class which inherits from Decorator class and provides a decorator for components.
+
+Okie now, lets look at an example so that we have clear idea about this.
+
+![UML imple Example](https://user-images.githubusercontent.com/49721667/80311154-9ab02e80-87fb-11ea-9c38-e60372472534.PNG)
+
+Here is the explaination:
+1. *Vehicle*: Component Interface.
+
+2. *HondaCity*: ConcreteComponent class.
+
+3. *VehicleDecorator*: Decorator Class.
+
+4. *Special Offer*: ConcreteDecorator class.
+
+lets look at **interface Vehicle**:
+```
+ public interface IVehicle
+{
+ string Make { get; }
+ string Model { get; }
+ double Price { get; }
+}
+```
+
+here is **concrete implementation** of vehicle interface,i.e is **HondaCity**:
+```
+public class HondaCity : Vehicle
+{
+ public string Make
+ {
+ get { return "HondaCity"; }
+ }
+public string Model
+ {
+ get { return "CNG"; }
+ }
+public double Price
+ {
+ get { return 1000000; }
+ }
+}
+```
+
+**Decorator Abstract** class:
+
+```
+public abstract class VehicleDecorator : Vehicle
+{
+ private Vehicle _vehicle;
+ public VehicleDecorator(Vehicle vehicle)
+ {
+ _vehicle = vehicle;
+ }
+ public string Make
+ {
+ get { return _vehicle.Make; }
+ }
+ public string Model
+ {
+ get { return _vehicle.Model; }
+ }
+ public double Price
+ {
+ get { return _vehicle.Price; }
+ }
+}
+
+```
+
+**ConcreteDecorator**
+
+```
+public class SpecialOffer : VehicleDecorator
+{
+ public SpecialOffer(Vehicle vehicle) : base(vehicle) { }
+ public int DiscountPercentage { get; set; }
+ public string Offer { get; set; }
+ public double Price
+ {
+ get
+ {
+ double price = base.Price;
+ int percentage = 100 - DiscountPercentage;
+ return Math.Round((price * percentage) / 100, 2);
+ }
+ }
+}
+```
+
+Here is Decorator Pattern Demo class:
+
+```
+class Program
+{
+ static void Main(string[] args)
+ {
+HondaCity car = new HondaCity();
+Console.WriteLine("Honda City base price are : {0}", car.Price);
+SpecialOffer offer = new SpecialOffer(car);
+ offer.DiscountPercentage = 25;
+ offer.Offer = "25 % discount";
+ Console.WriteLine("{1} @ Diwali Special Offer and price are : {0} ", offer.Price, offer.Offer);
+ Console.ReadKey();
+ }
+}
+
+```
+
+Output is here:
+
+![deco op](https://user-images.githubusercontent.com/49721667/80313658-e2d64d80-8809-11ea-978c-07309c8fe53a.PNG)
+
+When this pattern should be is used:
+>Add additional state or behavior to an object dynamically.
+Make changes to some objects in a class without affecting others.
+
+>Advantages are: 
+1. Adds functionality to existing objects dynamically.
+2. Alternative to sub classing.
+3. Flexible design.
+4. Supports Open Closed Principle.
+
+The complete code can be found at:
+[Design Pattern](https://github.com/shashanks4/DecoratorPattern_c-)
+
+**Singleton Design Pattern**: This pattern falls under the category of creational pattern. This is one of the simplest patterns.
+
+>This pattern ensures that a class has only one instance and provides a global point of access to it.
+>Singletons don't allow any parameters to be specified when creating the instance since the second request of an instance with a different parameter could be problematic! 
+
+There are various ways to implement the Singleton Pattern in C#. The following are the common characteristics of a Singleton Pattern.
+A single constructor, that is private and parameterless.
+The class is sealed.
+A static variable that holds a reference to the single created instance, if any.
+A public static means of getting the reference to the single created instance, creating one if necessary.
+
+There are various ways to implement Singleton pattern. 
+1.No Thread Safe Singleton.
+2. Thread-Safety Singleton.
+3. Thread-Safety Singleton using Double-Check Locking.
+4. Thread-Safe Singleton without using locks and no lazy instantiation.
+5. Fully lazy instantiation.
+6. Using .NET 4's Lazy<T> type.
+
+Lets look aT UML class diagram:
+
+![singleton_UML](https://user-images.githubusercontent.com/49721667/80308936-54ed6900-87ef-11ea-8a3c-1a63ea5ed799.png)
+
+
+
+*Singleton* : This is a class responsible for creating and maintaining its instance. Here instance refers to object
+
+
+Let us look at implemnetation of these one by one :
+
+1. **No Thread safe Sinyleton**: Two different threads could both have evaluated the test (if instance == null) and found it to be true, then both create instances, which violates the singleton pattern.
+Note that in fact the instance may already have been created before the expression is evaluated.
+
+It looks bit confusing, so we will look at the code and understand in deep.
+
+Code snippet goes like this:
+
+```
+public sealed class Singleton
+{
+
+ private string Name{get;set;}
+ private string IP{get;set;}
+ private Singleton()
+ {
+ Console.WriteLine("Singleton Intance");
+    Name = "Server1";
+    IP = "192.168.1.23";
+ }
+public static Singleton Instance
+ {
+ get
+ {
+if (Singleton.instance == null)
+ Singleton.instance = new Singleton();
+return Singleton.instance;
+ }
+ }
+public void Show()
+ {
+ Console.WriteLine("Server Information is : Name={0} & IP={1}", IP, Name);
+ }
+}
+```
+
+So here we are creating a singleton instance and we are checking whether multiple instance are created for the same object or not. If we look at above code in if statement initially if instance is equal to null then we are creating the instanceand we are returning the object. But we can create multiple instance for same object which voilates the Singleton's objective.
+
+we will go to second method,  which is thread safety singleton.
+
+2. **Thread-Safety Singleton**: the thread is locked on a shared object and checks whether an instance has been created or not.
+This takes care of the memory barrier issue and ensures that only one thread will create an instance.
+This takes care of the memory barrier issue and ensures that only one thread will create an instance.
+For example: Since only one thread can be in that part of the code at a time, by the time the second thread enters it, the first thread will have created the instance, so the expression will evaluate to false.
+The biggest problem with this is performance; performance suffers since a lock is required every time an instance is requested.
+
+
+
+Lets look at the code snippet:
+```
+ public class Singleton
+{
+private static Singleton instance = null;
+ private string Name{get;set;}
+ private string IP{get;set;}
+  private Singleton()
+ {
+ Console.WriteLine("Singleton Intance");
+ Name = "Server1";
+ IP = "192.168.1.23";
+ }
+ // Lock synchronization object
+private static object syncLock = new object(); 
+public static Singleton Instance
+ {
+ get
+ {
+lock(syncLock){
+ if (instance == null)
+ instance = new Singleton();
+ return instance;
+ }
+ }
+ } public void Show()
+ {
+ Console.WriteLine("Server Information is : Name={0} & IP={1}", IP, Name);
+ }
+}
+
+```
+So here we are creatinga lock, so that if there are many threads which wants to create an object and run,  locks will not allow, only one thread can complete the execution and hence even though there are multiple threads and it wants to create an instance it wont work using Locks.
+
+3. **Thread-Safety Singleton using Double-Check Locking**: the thread is locked on a shared object and checks whether an instance has been created or not with double checking.
+
+Lets look at the code snippet:
+```
+public class Singleton
+{
+    private static Singleton instance = null;
+ private string Name{get;set;}
+ private string IP{get;set;}
+ private Singleton()
+ {
+Console.WriteLine("Singleton Intance");
+Name = "Server1";
+ IP = "192.168.1.23";
+ }
+ // Lock synchronization object
+  private static object syncLock = new object();
+public static Singleton Instance
+ {
+ get
+ {
+     if(instance==null){
+lock(syncLock){
+  if (Singleton.instance == null)
+ {
+ Singleton.instance = new Singleton();
+ } 
+}
+     } 
+ return Singleton.instance;
+}
+} public void Show()
+ {
+ Console.WriteLine("Server Information is : Name={0} & IP={1}", IP, Name);
+ }
+}
+```
+Here in the above code we have double locking which ensures more safety.
+
+4. **Thread-Safe Singleton without using locks and no lazy instantiation** : Here we are creating the static constructor and we are avoinding multiple instances to be created.It is simple.
+
+Lets look at code snippet:
+```
+  public class Singleton
+{
+
+ private static Singleton instance = new Singleton();
+ private string Name{get;set;}
+ private string IP{get;set;}
+ static Singleton()
+ {
+
+ }
+ private Singleton()
+ {
+Console.WriteLine("Singleton Intance");
+ Name = "Server1";
+ IP = "192.168.1.23";
+ }
+public static Singleton Instance
+ {
+ get
+ {
+    return Singleton.instance;
+}
+ }
+ public void Show()
+ {
+ Console.WriteLine("Server Information is : Name={0} & IP={1}", IP, Name);
+ }
+}
+```
+Sofar we have seen the implementation of this pattern, now lets look at in what scenarios we can use singletonpattern.
+>Exactly one instance of a class is required.
+>Controlled access to a single object is necessary.
+
+>Advantages are:
+1. It can be extended into a factory pattern.
+2. It helps to hide dependencies.
+3. It provides a single point of access to a particular instance, so it is easy to maintain.
+4. It has static initialisation.
+
+The code can be found at:
+[Singleton Pattern](https://github.com/shashanks4/SingletonPattern_c-)
+
 **Factory Design Pattern**: The factory method is a creational design pattern that provides an interface for creating objects without specifying their concrete classes. So then what is design pattern ?
 
 > The answer is it is "reusable and interactions of the object" . These are solutions to software design problems you find again and again in real world application development.
