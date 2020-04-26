@@ -33,6 +33,22 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdgeConditions", "Puzzle3\E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solution2", "Puzzle3\solution2\solution2.csproj", "{045BD944-D0F7-48C6-AFDA-92860CE8482E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Singleton_Pattern", "Singleton_Pattern", "{6F8C67A0-AAFE-48E7-98F5-4B768FE27537}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NothreadSafesdp", "Singleton_Pattern\NoThreadSafeSDP\NothreadSafesdp.csproj", "{F357132F-57FA-4ABA-BFF3-8F8876EF6F86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadSafe_withNoLocks", "Singleton_Pattern\ThreadSafe_withNoLocks\ThreadSafe_withNoLocks.csproj", "{D67249B0-500C-4E99-9D64-2AD107C1C494}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadSafetySdp", "Singleton_Pattern\ThreadSafetySDP\ThreadSafetySdp.csproj", "{F3E8CCA6-AAB7-40CE-B1A8-59698DD4D99B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadsafetyUsingDoubleLocking_sdp", "Singleton_Pattern\ThreadSafetyUsingDoubleLocking_SDP\ThreadsafetyUsingDoubleLocking_sdp.csproj", "{AC0000BF-C291-4EC1-92BC-741E17B12799}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecoratorPattern.Example", "DecoratorPattern.Example\DecoratorPattern.Example.csproj", "{28602676-370E-44C0-9A71-6E68F0A68BDB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SpiralMatrixSolution", "SpiralMatrixSolution", "{0228C48C-0C7B-476A-9894-71A8C4415C19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solution3", "SpiralMatrixSolution\solution3\solution3.csproj", "{6B27E007-646E-4357-BCFA-A574C17FC1C9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
