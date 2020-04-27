@@ -1,0 +1,13 @@
+C:\Users\ADMIN\Desktop\All_Solutions\Observer_pattern_Example\obj\Debug\netcoreapp3.1\Observer_pattern_Example.csprojAssemblyReference.cache
+C:\Users\ADMIN\Desktop\All_Solutions\Observer_pattern_Example\obj\Debug\netcoreapp3.1\Observer_pattern_Example.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Desktop\All_Solutions\Observer_pattern_Example\obj\Debug\netcoreapp3.1\Observer_pattern_Example.AssemblyInfoInputs.cache
+C:\Users\ADMIN\Desktop\All_Solutions\Observer_pattern_Example\obj\Debug\netcoreapp3.1\Observer_pattern_Example.AssemblyInfo.cs
+C:\Users\ADMIN\Desktop\All_Solutions\Observer_pattern_Example\bin\Debug\netcoreapp3.1\Observer_pattern_Example.exe
+C:\Users\ADMIN\Desktop\All_Solutions\Observer_pattern_Example\bin\Debug\netcoreapp3.1\Observer_pattern_Example.deps.json
+C:\Users\ADMIN\Desktop\All_Solutions\Observer_pattern_Example\bin\Debug\netcoreapp3.1\Observer_pattern_Example.runtimeconfig.json
+C:\Users\ADMIN\Desktop\All_Solutions\Observer_pattern_Example\bin\Debug\netcoreapp3.1\Observer_pattern_Example.runtimeconfig.dev.json
+C:\Users\ADMIN\Desktop\All_Solutions\Observer_pattern_Example\bin\Debug\netcoreapp3.1\Observer_pattern_Example.dll
+C:\Users\ADMIN\Desktop\All_Solutions\Observer_pattern_Example\bin\Debug\netcoreapp3.1\Observer_pattern_Example.pdb
+C:\Users\ADMIN\Desktop\All_Solutions\Observer_pattern_Example\obj\Debug\netcoreapp3.1\Observer_pattern_Example.dll
+C:\Users\ADMIN\Desktop\All_Solutions\Observer_pattern_Example\obj\Debug\netcoreapp3.1\Observer_pattern_Example.pdb
+C:\Users\ADMIN\Desktop\All_Solutions\Observer_pattern_Example\obj\Debug\netcoreapp3.1\Observer_pattern_Example.genruntimeconfig.cache
