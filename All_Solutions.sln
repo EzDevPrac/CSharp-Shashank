@@ -47,7 +47,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecoratorPattern.Example", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SpiralMatrixSolution", "SpiralMatrixSolution", "{0228C48C-0C7B-476A-9894-71A8C4415C19}"
 EndProject
-
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Observer_pattern_Example", "Observer_Pattern_Example\Observer_pattern_Example.csproj", "{22C1BB61-C605-4702-AB11-A1128D6D0D7D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
