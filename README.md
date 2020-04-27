@@ -7,7 +7,157 @@ Welcome to the CSharp-Shashank wiki!
                                                   
                                                   Design Patterns
                                      
-**Decorator Design Pattern**: Decorator design pattern falls under Structural Pattern of Gang of Four (GOF) Design Patterns in .Net.
+**Observer Design Pattern**: This pattern falls under **Behavioural Pattern** of Gang of Four(GOF).
+
+>1. The observer pattern is a software design pattern in which an object, called the subject, maintains a list of its dependents, called observers, and notifies them automatically of any state changes, usually by calling one of their methods.
+2. This pattern is used when there is one to many relationships between objects such as if one object is modified, its dependent objects are to be notified automatically.
+3. Observer Design Pattern is allowed a single object, known as the subject, to publish changes to its state and other observer objects that depend upon the subject are automatically notified of any changes to the subject's state.
+
+>So one good example we can take is youtube. When a particular channel uploads a video, that will be notified for thier viewers, if they are subscibed for that channel. Here channel is subject and the number of subscribers are object. Here there is 1 to many relationship exists.
+
+Lets look at the UML class diagram:
+
+![observer-design-pattern](https://user-images.githubusercontent.com/49721667/80371697-ed4b2280-88af-11ea-900f-b24fd299bb16.png)
+
+
+what can be understood from above class diagram is that:
+
+1. *Subject*: This is a class that contains a private collection of the observers that are subscribed to a subject for notification by using Notify operation.
+
+2. *ConcreteSubject*: This is a class that maintains its own state. When a change is made to its state, the object calls the base class's Notify operation to indicate this to all of its observers.
+
+3. *Observer*: This is an interface which defines an operation Update, which is to be called when the subject's state changes.
+
+4.*ConcreteObserver*: This is a class that implements the Observer interface and examines the subject to determine which information has changed.
+
+Lets look at the real world example:
+
+Here **Subject** is Amazon, defined as an Interface:
+```
+  public interface ISubject
+    {
+         void RegisterObserver(IObserver observer);
+         void RemoveObserver(IObserver observer);
+         void NotifyObservers();
+    }
+```
+
+**Concrete Subject** Code snippet is shown below, which notifies when there is change in state:
+```
+public class Subject : ISubject
+    {
+        private List<IObserver> observers = new List<IObserver>();
+        private string ProductName { get; set; }
+        private int ProductPrice { get; set; }
+        private string Availability { get; set; }
+        public Subject(string productName, int productPrice, string availability)
+        {
+            ProductName = productName;
+            ProductPrice = productPrice;
+            Availability = availability;
+        }
+        
+        public string getAvailability()
+        {
+            return Availability;
+        }
+        public void setAvailability(string availability)
+        {
+            this.Availability = availability;
+            Console.WriteLine("Availability changed from Out of Stock to Available.");
+            NotifyObservers();
+        }
+        public void RegisterObserver(IObserver observer)
+        {
+            Console.WriteLine("Observer Added : " + ((Observer)observer).UserName );
+            observers.Add(observer);
+        }
+        public void AddObservers(IObserver observer)
+        {
+            observers.Add(observer);
+        }
+        public void RemoveObserver(IObserver observer)
+        {
+            observers.Remove(observer);
+        }
+        public void NotifyObservers()
+        {
+            Console.WriteLine("Product Name :"
+                            + ProductName + ", product Price : "
+                            + ProductPrice + " is Now available. So notifying all Registered users ");
+            Console.WriteLine();
+            foreach (IObserver observer in observers)
+            {
+                observer.update(Availability);
+            }
+        }
+    }
+```
+
+**Observer** implemented as Interface goes like this, in which objects that should be notified of changes in a Subject.
+```
+public interface IObserver
+    {
+        void update(string availability);
+    }
+```
+
+**Observer** code is shown below, that implements Observer:
+```
+public class Observer : IObserver
+    {
+        public string UserName { get; set; }
+        public Observer(string userName, ISubject subject)
+        {
+            UserName = userName;
+            subject.RegisterObserver(this);
+        }
+        public void update(string availabiliy)
+        {
+            Console.WriteLine("Hello " + UserName + ", Product is now " + availabiliy + " on Amazon");
+        }
+    }
+```
+
+**Driver class**:
+```
+
+static void Main(string[] args)
+        {
+            //Create a Product with Out Of Stock Status
+            Subject HTC = new Subject("HTC Mobile", 10000, "Out Of Stock");
+            
+            Observer user1 = new Observer("Shashank", HTC);
+            //User Abhi will be created and user1 object will be registered to the subject
+            Observer user2 = new Observer("Abhi", HTC); 
+            Console.WriteLine("Red MI Mobile current state : " + HTC.getAvailability());
+            Console.WriteLine();
+            // Now product is available
+            HTC.setAvailability("Available");
+            Console.Read();
+        }
+```
+
+Output is shown:
+
+![observer op](https://user-images.githubusercontent.com/49721667/80373478-c0e4d580-88b2-11ea-97e9-cac762672ea7.PNG)
+
+
+Sofar we saw how to implement observer pattern, now lets look at when should we use this pattern:
+
+>1. Changes in the state of an object need to be notified to a set of dependent objects.
+>2. Notification capability is required.
+
+>Advantages are:
+1. It supports the principle of loose coupling between objects that interact with each other.
+2. It allows sending data to other objects effectively without any change in the Subject or Observer classes.
+3. Observers can be added/removed at any point in time
+
+The complete code can be found at :
+[Observer Pattern](https://github.com/shashanks4/ObserverPattern-CSharp)
+
+
+**Decorator Design Pattern**: Decorator design pattern falls under **Structural Pattern** of Gang of Four (GOF) Design Patterns in .Net.
 
 >Decorator pattern is used to add new functionality to an existing object without changing its structure. Hence Decorator pattern provides an alternative way to inheritance for modifying the behavior of an object. The decorator pattern is often useful for adhering to the Single Responsibility Principle, as it allows functionality to be divided between classes with unique areas of concern.The decorator pattern is structurally nearly identical to the chain of responsibility pattern, the difference being that in a chain of responsibility, exactly one of the classes handles the request, while for the decorator, all classes handle the request.
 
