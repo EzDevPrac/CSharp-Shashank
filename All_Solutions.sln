@@ -49,6 +49,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SpiralMatrixSolution", "Spi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Observer_pattern_Example", "Observer_Pattern_Example\Observer_pattern_Example.csproj", "{22C1BB61-C605-4702-AB11-A1128D6D0D7D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "customerStrategy.test", "CustomerStrategy.Test\customerStrategy.test.csproj", "{10A57C49-C993-4CDA-9A91-10C62B03794C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrategyPattern.Example", "StrategyPattern.Example\StrategyPattern.Example.csproj", "{A15FE3F5-EAAA-4590-89E5-56A5E953ECC5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
