@@ -1,0 +1,13 @@
+C:\Users\ADMIN\Desktop\All_Solutions\StrategyPattern.Example\obj\Debug\netcoreapp3.1\StrategyPattern.Example.csprojAssemblyReference.cache
+C:\Users\ADMIN\Desktop\All_Solutions\StrategyPattern.Example\obj\Debug\netcoreapp3.1\StrategyPattern.Example.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Desktop\All_Solutions\StrategyPattern.Example\obj\Debug\netcoreapp3.1\StrategyPattern.Example.AssemblyInfoInputs.cache
+C:\Users\ADMIN\Desktop\All_Solutions\StrategyPattern.Example\obj\Debug\netcoreapp3.1\StrategyPattern.Example.AssemblyInfo.cs
+C:\Users\ADMIN\Desktop\All_Solutions\StrategyPattern.Example\bin\Debug\netcoreapp3.1\StrategyPattern.Example.exe
+C:\Users\ADMIN\Desktop\All_Solutions\StrategyPattern.Example\bin\Debug\netcoreapp3.1\StrategyPattern.Example.deps.json
+C:\Users\ADMIN\Desktop\All_Solutions\StrategyPattern.Example\bin\Debug\netcoreapp3.1\StrategyPattern.Example.runtimeconfig.json
+C:\Users\ADMIN\Desktop\All_Solutions\StrategyPattern.Example\bin\Debug\netcoreapp3.1\StrategyPattern.Example.runtimeconfig.dev.json
+C:\Users\ADMIN\Desktop\All_Solutions\StrategyPattern.Example\bin\Debug\netcoreapp3.1\StrategyPattern.Example.dll
+C:\Users\ADMIN\Desktop\All_Solutions\StrategyPattern.Example\bin\Debug\netcoreapp3.1\StrategyPattern.Example.pdb
+C:\Users\ADMIN\Desktop\All_Solutions\StrategyPattern.Example\obj\Debug\netcoreapp3.1\StrategyPattern.Example.dll
+C:\Users\ADMIN\Desktop\All_Solutions\StrategyPattern.Example\obj\Debug\netcoreapp3.1\StrategyPattern.Example.pdb
+C:\Users\ADMIN\Desktop\All_Solutions\StrategyPattern.Example\obj\Debug\netcoreapp3.1\StrategyPattern.Example.genruntimeconfig.cache
