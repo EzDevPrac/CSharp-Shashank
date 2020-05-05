@@ -57,6 +57,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractFactory.Exapmle", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prototype.Example", "Prototype.Example\prototype.Example.csproj", "{8CA37314-44A1-4A25-B3C9-B3A0B88F64B0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adapter.Example", "Adapter.Example\Adapter.Example.csproj", "{F6A26058-E814-44F6-9207-2A3DAA78F5BC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
