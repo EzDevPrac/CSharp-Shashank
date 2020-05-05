@@ -1,0 +1,13 @@
+C:\Users\ADMIN\Desktop\All_Solutions\Adapter.Example\obj\Debug\netcoreapp3.1\Adapter.Example.csprojAssemblyReference.cache
+C:\Users\ADMIN\Desktop\All_Solutions\Adapter.Example\obj\Debug\netcoreapp3.1\Adapter.Example.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Desktop\All_Solutions\Adapter.Example\obj\Debug\netcoreapp3.1\Adapter.Example.AssemblyInfoInputs.cache
+C:\Users\ADMIN\Desktop\All_Solutions\Adapter.Example\obj\Debug\netcoreapp3.1\Adapter.Example.AssemblyInfo.cs
+C:\Users\ADMIN\Desktop\All_Solutions\Adapter.Example\bin\Debug\netcoreapp3.1\Adapter.Example.exe
+C:\Users\ADMIN\Desktop\All_Solutions\Adapter.Example\bin\Debug\netcoreapp3.1\Adapter.Example.deps.json
+C:\Users\ADMIN\Desktop\All_Solutions\Adapter.Example\bin\Debug\netcoreapp3.1\Adapter.Example.runtimeconfig.json
+C:\Users\ADMIN\Desktop\All_Solutions\Adapter.Example\bin\Debug\netcoreapp3.1\Adapter.Example.runtimeconfig.dev.json
+C:\Users\ADMIN\Desktop\All_Solutions\Adapter.Example\bin\Debug\netcoreapp3.1\Adapter.Example.dll
+C:\Users\ADMIN\Desktop\All_Solutions\Adapter.Example\bin\Debug\netcoreapp3.1\Adapter.Example.pdb
+C:\Users\ADMIN\Desktop\All_Solutions\Adapter.Example\obj\Debug\netcoreapp3.1\Adapter.Example.dll
+C:\Users\ADMIN\Desktop\All_Solutions\Adapter.Example\obj\Debug\netcoreapp3.1\Adapter.Example.pdb
+C:\Users\ADMIN\Desktop\All_Solutions\Adapter.Example\obj\Debug\netcoreapp3.1\Adapter.Example.genruntimeconfig.cache
