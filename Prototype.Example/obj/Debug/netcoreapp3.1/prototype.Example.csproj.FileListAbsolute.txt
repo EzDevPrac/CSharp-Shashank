@@ -1,0 +1,13 @@
+C:\Users\ADMIN\Desktop\All_Solutions\prototype.Example\bin\Debug\netcoreapp3.1\prototype.Example.exe
+C:\Users\ADMIN\Desktop\All_Solutions\prototype.Example\bin\Debug\netcoreapp3.1\prototype.Example.deps.json
+C:\Users\ADMIN\Desktop\All_Solutions\prototype.Example\bin\Debug\netcoreapp3.1\prototype.Example.runtimeconfig.json
+C:\Users\ADMIN\Desktop\All_Solutions\prototype.Example\bin\Debug\netcoreapp3.1\prototype.Example.runtimeconfig.dev.json
+C:\Users\ADMIN\Desktop\All_Solutions\prototype.Example\bin\Debug\netcoreapp3.1\prototype.Example.dll
+C:\Users\ADMIN\Desktop\All_Solutions\prototype.Example\bin\Debug\netcoreapp3.1\prototype.Example.pdb
+C:\Users\ADMIN\Desktop\All_Solutions\prototype.Example\obj\Debug\netcoreapp3.1\prototype.Example.csprojAssemblyReference.cache
+C:\Users\ADMIN\Desktop\All_Solutions\prototype.Example\obj\Debug\netcoreapp3.1\prototype.Example.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Desktop\All_Solutions\prototype.Example\obj\Debug\netcoreapp3.1\prototype.Example.AssemblyInfoInputs.cache
+C:\Users\ADMIN\Desktop\All_Solutions\prototype.Example\obj\Debug\netcoreapp3.1\prototype.Example.AssemblyInfo.cs
+C:\Users\ADMIN\Desktop\All_Solutions\prototype.Example\obj\Debug\netcoreapp3.1\prototype.Example.dll
+C:\Users\ADMIN\Desktop\All_Solutions\prototype.Example\obj\Debug\netcoreapp3.1\prototype.Example.pdb
+C:\Users\ADMIN\Desktop\All_Solutions\prototype.Example\obj\Debug\netcoreapp3.1\prototype.Example.genruntimeconfig.cache
