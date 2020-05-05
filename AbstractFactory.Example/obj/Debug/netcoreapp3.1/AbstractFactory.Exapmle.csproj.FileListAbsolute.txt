@@ -1,0 +1,13 @@
+C:\Users\ADMIN\Desktop\All_Solutions\AbstractFactory.Example\obj\Debug\netcoreapp3.1\AbstractFactory.Exapmle.csprojAssemblyReference.cache
+C:\Users\ADMIN\Desktop\All_Solutions\AbstractFactory.Example\obj\Debug\netcoreapp3.1\AbstractFactory.Exapmle.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Desktop\All_Solutions\AbstractFactory.Example\obj\Debug\netcoreapp3.1\AbstractFactory.Exapmle.AssemblyInfoInputs.cache
+C:\Users\ADMIN\Desktop\All_Solutions\AbstractFactory.Example\obj\Debug\netcoreapp3.1\AbstractFactory.Exapmle.AssemblyInfo.cs
+C:\Users\ADMIN\Desktop\All_Solutions\AbstractFactory.Example\bin\Debug\netcoreapp3.1\AbstractFactory.Exapmle.exe
+C:\Users\ADMIN\Desktop\All_Solutions\AbstractFactory.Example\bin\Debug\netcoreapp3.1\AbstractFactory.Exapmle.deps.json
+C:\Users\ADMIN\Desktop\All_Solutions\AbstractFactory.Example\bin\Debug\netcoreapp3.1\AbstractFactory.Exapmle.runtimeconfig.json
+C:\Users\ADMIN\Desktop\All_Solutions\AbstractFactory.Example\bin\Debug\netcoreapp3.1\AbstractFactory.Exapmle.runtimeconfig.dev.json
+C:\Users\ADMIN\Desktop\All_Solutions\AbstractFactory.Example\bin\Debug\netcoreapp3.1\AbstractFactory.Exapmle.dll
+C:\Users\ADMIN\Desktop\All_Solutions\AbstractFactory.Example\bin\Debug\netcoreapp3.1\AbstractFactory.Exapmle.pdb
+C:\Users\ADMIN\Desktop\All_Solutions\AbstractFactory.Example\obj\Debug\netcoreapp3.1\AbstractFactory.Exapmle.dll
+C:\Users\ADMIN\Desktop\All_Solutions\AbstractFactory.Example\obj\Debug\netcoreapp3.1\AbstractFactory.Exapmle.pdb
+C:\Users\ADMIN\Desktop\All_Solutions\AbstractFactory.Example\obj\Debug\netcoreapp3.1\AbstractFactory.Exapmle.genruntimeconfig.cache
