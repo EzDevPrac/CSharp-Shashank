@@ -7,6 +7,608 @@ Welcome to the CSharp-Shashank wiki!
                                                   
                                                   Design Patterns
                                      
+
+
+**ProtoType Design Pattern**: The prototype pattern is a **creational design pattern** in software development.
+
+>It is used when the type of objects to create is determined by a prototypical instance, which is cloned to produce new objects. This pattern is used to:
+Avoid subclasses of an object creator in the client application, like the factory method pattern does.
+Avoid the inherent cost of creating a new object in the standard way (e.g., using the 'new' keyword) when it is prohibitively expensive for a given application.
+
+Lets look at UML Class diagram:
+
+![proto uml](https://user-images.githubusercontent.com/49721667/81090439-5d465200-8f1b-11ea-8645-31e7ebdd3fe4.PNG)
+
+what above diagram means is that :
+
+1. *Prototype*: This is an interface which is used for the types of object that can be cloned itself.
+
+2. *ConcretePrototype*: This is a class which implements the Prototype interface for cloning itself.
+
+Lets look at an Example so that we can get a clear view:
+
+Here is **Employee Interface**:
+
+```
+   public interface IEmployee
+ {
+    IEmployee Clone();
+    string GetDetails();
+ }
+```
+
+**ConcretePrototype(Developer & Typist)**:
+
+```
+ public class Developer : IEmployee
+{
+    public int WordsPerMinute { get; set; }
+    public string Name { get; set; }
+    public string Role { get; set; }
+    public string PreferredLanguage { get; set; }
+
+    public IEmployee Clone()
+    {
+    // Shallow Copy: only top-level objects are duplicated
+    return (IEmployee)MemberwiseClone();
+
+    // Deep Copy: all objects are duplicated
+    //return (IEmployee)this.Clone();
+    }
+
+    public string GetDetails()
+    {
+    return string.Format("{0} - {1} - {2}", Name, Role, PreferredLanguage);
+    }
+}
+
+   public class Typist : IEmployee
+{
+        public int WordsPerMinute { get; set; }
+        public string Name { get; set; }
+        public string Role { get; set; }
+
+        public IEmployee Clone()
+        {
+        // Shallow Copy: only top-level objects are duplicated
+        return (IEmployee)MemberwiseClone();
+
+        // Deep Copy: all objects are duplicated
+        //return (IEmployee)this.Clone();
+        }
+
+        public string GetDetails()
+        {
+        return string.Format("{0} - {1} - {2}wpm", Name, Role, WordsPerMinute);
+        }
+}
+```
+
+**Driver Class**:
+
+```
+static void Main(string[] args)
+        {
+          Developer dev = new Developer();
+                dev.Name = "John Cena";
+                dev.Role = "Team Leader";
+                dev.PreferredLanguage = "C#";
+
+                Developer devCopy = (Developer)dev.Clone();
+                devCopy.Name = "Abhi"; //Not mention Role and PreferredLanguage, it will copy above
+
+                Console.WriteLine(dev.GetDetails());
+                Console.WriteLine(devCopy.GetDetails());
+
+                Typist typist = new Typist();
+                typist.Name = "UnderTaker";
+                typist.Role = "Typist";
+                typist.WordsPerMinute = 120;
+
+                Typist typistCopy = (Typist)typist.Clone();
+                typistCopy.Name = "John";
+                typistCopy.WordsPerMinute = 115;//Not mention Role, it will copy above
+
+                Console.WriteLine(typist.GetDetails());
+                Console.WriteLine(typistCopy.GetDetails());
+        }
+    }
+```
+
+Output:
+
+![proto op](https://user-images.githubusercontent.com/49721667/81091118-608e0d80-8f1c-11ea-86fa-862485a7b52c.PNG)
+
+Lets look at **Application** of this pattern:
+
+>1. Creation of each object is costly or complex.
+>2. A limited number of state combinations exist in an object.
+
+**Advantages** are:
+>1. It reduces the need of sub-classing.
+>2. It hides complexities of creating objects.
+>3. The clients can get new objects without knowing which type of object it will be.
+>4. It lets you add or remove objects at runtime.
+
+Here is Code:
+[Prototype Pattern](https://github.com/shashanks4/PrototypeDesignPattern)
+
+**AbstractFactory Design Pattern**: This pattern falls under **Behavioral Pattern** of Gang of Four(GOF).
+
+>1. According to Gang of Four Definition: “The Abstract Factory Design Pattern provides a way to encapsulate a group of individual factories that have a common theme without specifying their concrete classes“.
+>2. In simple words we can say, the Abstract Factory is a super factory that creates other factories. This Factory is also called Factory of Factories.
+
+Lets look at UML Class diagram:
+
+![abstractfactory UML](https://user-images.githubusercontent.com/49721667/81086866-ac3db880-8f16-11ea-8b8e-f6b25f656de2.png)
+
+lets understand what above UML Components mean:
+>*AbstractFactory*: This is an interface which is used to create abstract product
+
+>*ConcreteFactory*: This is a class which implements the AbstractFactory interface to create concrete products.
+
+>*AbstractProduct*: This is an interface which declares a type of product.
+
+>*ConcreteProduct*: This is a class which implements the AbstractProduct interface to create a product.
+
+>*Client*: This is a class which uses AbstractFactory and AbstractProduct interfaces to create a family of related objects.
+
+Lets look at real world example:
+
+Let us create **Animal Interface**:
+
+```
+public interface IAnimal
+    {
+        string speak();
+    }
+
+```
+
+**ConcreteProduct**:
+
+```
+ public class Cat : IAnimal
+    {
+        public string speak()
+        {
+            return "Meow Meow Meow";
+        }
+    }
+    public class Lion : IAnimal
+    {
+        public string speak()
+        {
+            return "Roar";
+        }
+    }
+    public class Dog : IAnimal
+    {
+        public string speak()
+        {
+            return "Bark bark";
+        }
+    }
+    public class Octopus : IAnimal
+    {
+        public string speak()
+        {
+            return "SQUAWCK";
+        }
+    }
+    public class Shark : IAnimal
+    {
+        public string speak()
+        {
+            return "Cannot Speak";
+        }
+    }
+```
+
+
+```
+ public class LandAnimalFactory : AnimalFactory
+    {
+        public override IAnimal GetAnimal(string AnimalType)
+        {
+            if (AnimalType.Equals("Dog"))
+            {
+                return new Dog();
+            }
+            else if (AnimalType.Equals("Cat"))
+            {
+                return new Cat();
+            }
+            else if (AnimalType.Equals("Lion"))
+            {
+                return new Lion();
+            }
+            else
+                return null;
+        }
+    }
+  ```
+  **AbstractFactory**:
+  
+  ```
+    public abstract class AnimalFactory
+    {
+        public abstract IAnimal GetAnimal(string AnimalType);
+        public static AnimalFactory CreateAnimalFactory(string FactoryType)
+        {
+            if (FactoryType.Equals("Sea"))
+                return new SeaAnimalFactory();
+            else
+                return new LandAnimalFactory();
+        }
+    }
+  ```
+  
+  **ConcreteFactory**:
+```  
+   public class SeaAnimalFactory : AnimalFactory
+      {
+    public override IAnimal GetAnimal(string AnimalType)
+        {
+            if (AnimalType.Equals("Shark"))
+            {
+                return new Shark();
+            }
+            else if (AnimalType.Equals("Octopus"))
+            {
+                return new Octopus();
+            }
+            else
+                return null;
+        }
+      }
+     public class LandAnimalFactory : AnimalFactory
+    {
+        public override IAnimal GetAnimal(string AnimalType)
+        {
+            if (AnimalType.Equals("Dog"))
+            {
+                return new Dog();
+            }
+            else if (AnimalType.Equals("Cat"))
+            {
+                return new Cat();
+            }
+            else if (AnimalType.Equals("Lion"))
+            {
+                return new Lion();
+            }
+            else
+                return null;
+        }
+    }
+```
+
+**Driver** :
+
+```
+class Program
+    {
+        static void Main(string[] args)
+        {
+            IAnimal animal = null;
+            AnimalFactory animalFactory = null;
+            string speakSound = null;
+
+            // Create the Sea Factory object by passing the factory type as Sea
+            animalFactory = AnimalFactory.CreateAnimalFactory("Sea");
+            Console.WriteLine("Animal Factory type : " + animalFactory.GetType().Name);
+            Console.WriteLine();
+
+            // Get Octopus Animal object by passing the animal type as Octopus
+            animal = animalFactory.GetAnimal("Octopus");
+            Console.WriteLine("Animal Type : " + animal.GetType().Name);
+            speakSound = animal.speak();
+            Console.WriteLine(animal.GetType().Name + " Speak : " + speakSound);
+            Console.WriteLine();
+
+            Console.WriteLine("--------------------------");
+            // Create Land Factory object by passing the factory type as Land
+            animalFactory = AnimalFactory.CreateAnimalFactory("Land");
+            Console.WriteLine("Animal Factory type : " + animalFactory.GetType().Name);
+            Console.WriteLine();
+
+            // Get Lion Animal object by passing the animal type as Lion
+            animal = animalFactory.GetAnimal("Lion");
+            Console.WriteLine("Animal Type : " + animal.GetType().Name);
+            speakSound = animal.speak();
+            Console.WriteLine(animal.GetType().Name + " Speak : " + speakSound);
+            Console.WriteLine();
+
+            // Get Cat Animal object by passing the animal type as Cat
+            animal = animalFactory.GetAnimal("Cat");
+            Console.WriteLine("Animal Type : " + animal.GetType().Name);
+            speakSound = animal.speak();
+            Console.WriteLine(animal.GetType().Name + " Speak : " + speakSound);
+ }
+    }
+```
+
+Here is the output:
+
+![Abf op](https://user-images.githubusercontent.com/49721667/81089081-86fe7980-8f19-11ea-9d70-6f324636fa00.PNG)
+
+
+**Application** of AbstractFactory :
+
+>1. Create a set of related objects or dependent objects which must be used together.
+>2. System should be configured to work with multiple families of products.
+>3. The creation of objects should be independent of the utilizing system.
+>4. Concrete classes should be decoupled from clients.
+
+Advantages:
+>1. Abstract Factory Pattern isolates the client code from concrete (implementation) classes.
+>2. It eases the exchanging of object families.
+>3. It promotes consistency among objects
+
+Code can be found at:
+[AbstractFactory Pattern](https://github.com/shashanks4/AbstractFactoryPattern)
+
+
+**Iterator Design Pattern**: This pattern falls under **Behavioral Pattern** of Gang of Four(GOF).
+
+>1. The Iterator Design Pattern in C# allows sequential access of elements without exposing the inside logic. That means using the Iterator Design Pattern we can access the elements of a collection object in a sequential manner without any need to know its internal representations.
+>2. The collections (List, Array List, Array, etc.) are nothing but a container that contains lots of objects. In object-oriented programming, the iterator pattern is a design pattern in which an iterator is used to traverse a container and access the elements of the container. 
+
+>One good example of this is pattern is commonly used in the menu systems of many applications such as Editor, IDE, etc.
+
+Lets look at the UML Class diagram:
+
+![Iterator UML](https://user-images.githubusercontent.com/49721667/81078661-23ba1a80-8f0c-11ea-9666-fdf6b7c8a8c6.PNG)
+
+here is the explaination:
+
+1. *Aggregate*: This is an interface which defines an operation to create an iterator.
+2. *Iterator* : This is an interface that defines operations for accessing the collection elements in a sequence.
+3. *ConcreteIterator*:This is a class that implements the Iterator interface.
+4. *ConcreteAggregate*:This is a class that implements an Aggregate interface.
+5. *Cleint*: This is the class that contains an object collection and uses the Next operation of the iterator to retrieve items from the aggregate in an appropriate sequence.
+
+Lets look at an **Employee list example(Collection Items)**:
+
+```
+public class Employee
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public Employee(string name, int id)
+        {
+            Name = name;
+            ID = id;
+        }
+    }
+```
+
+Here is **Iterator Interface**:
+
+```
+ public interface IAbstractIterator
+    {
+         Employee First();
+         Employee Next();
+         bool IsCompleted { get; }
+    }
+```
+
+**ConcreteIteraror**:
+
+```
+public  class Iterator : IAbstractIterator
+    {
+        private ConcreteCollection collection;
+        private int current = 0;
+        private int step = 1;
+        // Constructor
+        public Iterator(ConcreteCollection collection)
+        {
+            this.collection = collection;
+        }
+        // Gets first item
+        public Employee First()
+        {
+            current = 0;
+            return collection.GetEmployee(current);
+        }
+        // Gets next item
+        public Employee Next()
+        {
+            current += step;
+            if (!IsCompleted)
+            {
+                return collection.GetEmployee(current);
+            }
+            else
+            {
+                return null;
+            }
+        }
+        // Check whether iteration is complete
+        public bool IsCompleted
+        {
+            get { return current >= collection.Count; }
+        }
+    }
+```
+
+**Aggregate**:
+
+```
+public interface IAbstractCollection
+    {
+        Iterator CreateIterator();
+    }
+```
+
+**CrocreteIterator**:
+
+```
+public  class ConcreteCollection : IAbstractCollection
+    {
+        private List<Employee> listEmployees = new List<Employee>();
+        //Create Iterator
+        public Iterator CreateIterator()
+        {
+            return new Iterator(this);
+        }
+        // Gets item count
+        public int Count
+        {
+            get { return listEmployees.Count; }
+        }
+        //Add items to the collection
+        public void AddEmployee(Employee employee)
+        {
+            listEmployees.Add(employee);
+        }
+        //Get item from collection
+        public Employee GetEmployee(int IndexPosition)
+        {
+            return listEmployees[IndexPosition];
+        }
+    }
+```
+Output:
+
+![Iterator op](https://user-images.githubusercontent.com/49721667/81085750-40a71b80-8f15-11ea-880c-5545c98e8989.PNG)
+
+
+Where can we use Iterator Pattern:
+
+>1. Allows accessing the elements of a collection object in a sequential manner without knowing its underlying structure.
+>2. Multiple or concurrent iterations are required over collections elements.
+
+**Advantages** are:
+>1.he code is easier to use, understand and test since the iterator uses the Single Responsibility and Open/Closed SOLID principles. The Single Responsibility Principle allows us to clean up the client and collections of the traversal algorithms
+
+
+Code can be found at:
+[Iterator Pattern](https://github.com/shashanks4/IteratorPattern)
+
+**Strategy Design Pattern**: This pattern falls under **Behavioral Pattern** of Gang of Four(GOF).
+
+>1. This pattern allows a client to choose an algorithm from a family of algorithms at run-time and gives it a simple way to access it.
+>2. This pattern involves the removal of an algorithm from its host class and putting it in a separate class. As you know, there may be multiple strategies which are applicable for a given problem. So, if the algorithms will exist in the host class, then it will result in a messy code with lots of conditional statements.
+
+Lets looks at UML class diagram:
+
+![strategy-design-pattern UML](https://user-images.githubusercontent.com/49721667/81074901-4564d300-8f07-11ea-9278-754ec192da77.png)
+
+Here is the exaplaination for above UML:
+1. *Context*: This is a class that contains a property to hold the reference of a Strategy object. This property will be set at run-time according to the algorithm that is required.
+
+2. *Strategy*: This is an interface that is used by the Context object to call the algorithm defined by a ConcreteStrategy.
+
+3. *ConcreteStrategyA/B*: These are classes that implement the Strategy interface.
+
+Suppose take example of Customer. So we will implement this now.
+
+Here is the **Context Interface** :
+
+```
+public interface IBillingStrategy
+{
+    double GetActPrice(double rawPrice);
+}
+// Normal billing strategy (unchanged price)
+class NormalStrategy : IBillingStrategy
+{
+    public double GetActPrice(double rawPrice) => rawPrice;
+}
+// Strategy for Happy hour (50% discount)
+class HappyHourStrategy : IBillingStrategy
+{
+    public double GetActPrice(double rawPrice) => rawPrice * 0.5;
+}
+```
+
+Here is Strategies for different customers:
+
+```
+public class Customer
+{
+private IList<double> drinks;
+    // Get/Set Strategy
+    public IBillingStrategy Strategy { get; set; }
+    public Customer(IBillingStrategy strategy)
+    {
+        this.drinks = new List<double>();
+        this.Strategy = strategy;
+    }
+    public void Add(double price, int quantity)
+    {
+        this.drinks.Add(this.Strategy.GetActPrice(price * quantity));
+    }
+  // Payment of bill
+     public void PrintBill()
+    {
+        double sum = 0;
+        foreach (var drinkCost in this.drinks)
+        {
+            sum += drinkCost;
+        }
+        Console.WriteLine($"Total due: {sum}.");
+        this.drinks.Clear();
+    }
+}
+```
+
+The **Driver class**:
+
+```
+class DriverClass
+    {
+        static void Main(string[] args)
+        {
+            var normalStrategy    = new NormalStrategy();
+        var happyHourStrategy = new HappyHourStrategy();
+        var firstCustomer = new Customer(normalStrategy);
+
+        // Normal billing
+        firstCustomer.Add(2,2);
+
+        // Start Happy Hour
+        firstCustomer.Strategy = happyHourStrategy;
+        firstCustomer.Add(1.0, 2);
+
+        // New Customer
+        Customer secondCustomer = new Customer(happyHourStrategy);
+        secondCustomer.Add(0.8, 1);
+        // The Customer pays
+        firstCustomer.PrintBill();
+
+        // End Happy Hour
+        secondCustomer.Strategy = normalStrategy;
+        secondCustomer.Add(1.3, 2);
+        secondCustomer.Add(2.5, 1);
+        secondCustomer.PrintBill();
+        }
+    }
+```
+
+Output is:
+
+
+![strategy-design-patternop](https://user-images.githubusercontent.com/49721667/81076710-9bd31100-8f09-11ea-91f9-d29552fb0b59.png)
+
+When this pattern should be used:
+
+>1. There are multiple strategies for a given problem and the selection criteria of a strategy are defined as a run-time.
+
+>2. Many related classes only differ in their behaviors.
+
+**Advantages** of Strategy Pattern:
+
+>1. It's easy to switch between different algorithms (strategies) in runtime because you're using polymorphism in the interfaces.
+>2. Clean code because you avoid conditional-infested code (not complex).
+>3. More clean code because you separate the concerns into classes (a class to each strategy).
+
+Code:
+[Strategy Pattern](https://github.com/shashanks4/StrategyPattern)
 **Observer Design Pattern**: This pattern falls under **Behavioural Pattern** of Gang of Four(GOF).
 
 >1. The observer pattern is a software design pattern in which an object, called the subject, maintains a list of its dependents, called observers, and notifies them automatically of any state changes, usually by calling one of their methods.
@@ -995,7 +1597,7 @@ when to use command pattern :
 
 The code can be found at :[Command Pattern](https://github.com/shashanks4/Command-Design-Pattern)
 
-Facade Design Pattern : This design pattern falls under Structural pattern. Facade pattern hides the complexities of system and provides an interface to the client, using which the client can access the system.(Here client refers the small piece of code nothing else).
+**Facade Design Pattern** : This design pattern falls under Structural pattern. Facade pattern hides the complexities of system and provides an interface to the client, using which the client can access the system.(Here client refers the small piece of code nothing else).
 
  >The Facade design pattern is particularly used when a system is very complex or difficult to understand because the system has a large >number of interdependent classes or its source code is unavailable.This pattern involves a single wrapper class which contains a set of >members which are required by the client. These members access the system on behalf of the facade client and hide the implementation >details.
 
