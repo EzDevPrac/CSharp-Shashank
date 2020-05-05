@@ -53,6 +53,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "customerStrategy.test", "Cu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrategyPattern.Example", "StrategyPattern.Example\StrategyPattern.Example.csproj", "{A15FE3F5-EAAA-4590-89E5-56A5E953ECC5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractFactory.Exapmle", "AbstractFactory.Example\AbstractFactory.Exapmle.csproj", "{51987EBE-1BDC-4ADF-B048-034E8C9ECEE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prototype.Example", "Prototype.Example\prototype.Example.csproj", "{8CA37314-44A1-4A25-B3C9-B3A0B88F64B0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
