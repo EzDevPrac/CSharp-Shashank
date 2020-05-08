@@ -1,0 +1,13 @@
+C:\Users\ADMIN\Desktop\All_Solutions\Proxy.Example\bin\Debug\netcoreapp3.1\Proxy.Example.exe
+C:\Users\ADMIN\Desktop\All_Solutions\Proxy.Example\bin\Debug\netcoreapp3.1\Proxy.Example.deps.json
+C:\Users\ADMIN\Desktop\All_Solutions\Proxy.Example\bin\Debug\netcoreapp3.1\Proxy.Example.runtimeconfig.json
+C:\Users\ADMIN\Desktop\All_Solutions\Proxy.Example\bin\Debug\netcoreapp3.1\Proxy.Example.runtimeconfig.dev.json
+C:\Users\ADMIN\Desktop\All_Solutions\Proxy.Example\bin\Debug\netcoreapp3.1\Proxy.Example.dll
+C:\Users\ADMIN\Desktop\All_Solutions\Proxy.Example\bin\Debug\netcoreapp3.1\Proxy.Example.pdb
+C:\Users\ADMIN\Desktop\All_Solutions\Proxy.Example\obj\Debug\netcoreapp3.1\Proxy.Example.csprojAssemblyReference.cache
+C:\Users\ADMIN\Desktop\All_Solutions\Proxy.Example\obj\Debug\netcoreapp3.1\Proxy.Example.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Desktop\All_Solutions\Proxy.Example\obj\Debug\netcoreapp3.1\Proxy.Example.AssemblyInfoInputs.cache
+C:\Users\ADMIN\Desktop\All_Solutions\Proxy.Example\obj\Debug\netcoreapp3.1\Proxy.Example.AssemblyInfo.cs
+C:\Users\ADMIN\Desktop\All_Solutions\Proxy.Example\obj\Debug\netcoreapp3.1\Proxy.Example.dll
+C:\Users\ADMIN\Desktop\All_Solutions\Proxy.Example\obj\Debug\netcoreapp3.1\Proxy.Example.pdb
+C:\Users\ADMIN\Desktop\All_Solutions\Proxy.Example\obj\Debug\netcoreapp3.1\Proxy.Example.genruntimeconfig.cache
