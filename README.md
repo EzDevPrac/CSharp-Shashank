@@ -8,6 +8,267 @@ Welcome to the CSharp-Shashank wiki!
                                                   Design Patterns
                                      
 
+**Adapter Design Pattern**: Falls under **Structural Pattern** of gang of four.
+
+>Adapter Pattern makes two incompatible interface, compatible. 
+>This pattern involves a single class called adapter which is responsible for communication between two independent or incompatible interfaces.
+
+UML class diagram:
+
+![Adapteruml](https://user-images.githubusercontent.com/49721667/81417909-89571280-9169-11ea-88a5-c8637a6341b7.PNG)
+
+*ITarget*:This is an interface which is used by the client to achieve its functionality/request.
+
+*Adapter*: This is a class which implements the ITarget interface and inherits the Adaptee class. It is responsible for communication between Client and Adaptee.
+
+*Adaptee*: This is a class which has the functionality, required by the client. However, its interface is not compatible with the client.
+
+*Client*:This is a class which interacts with a type that implements the ITarget interface. However, the communication class called adaptee, is not compatible with the client.
+
+To say, suppose there is an american who can only speak and understand English, and there is an Indian who can understand Hindi but not english, if they want to communicate, its not possible. So there is a requirement for language translator. Here we can relate American and indian as two incompatible interfaces, then adaptee is the language translator.
+
+Lets look at the code snippet:
+
+**Adapter** class
+
+```
+  public class EmployeeAdapter : HRSystem, ITarget
+{
+ public List<string> GetEmployeeList()
+ {
+ List<string> employeeList = new List<string>();
+ string[][] employees = GetEmployees();
+ foreach (string[] employee in employees)
+ {
+ employeeList.Add(employee[0]);
+ employeeList.Add(",");
+ employeeList.Add(employee[1]);
+ employeeList.Add(",");
+ employeeList.Add(employee[2]);
+ employeeList.Add("\n");
+ }
+ 
+ return employeeList;
+ }
+}
+```
+
+**Adaptee class**:
+
+```
+public class HRSystem
+ {
+  public string[][] GetEmployees()
+    {
+    string[][] employees = new string[4][];
+ 
+     employees[0] = new string[] { "100", "Shashank", "Developer" };
+     employees[1] = new string[] { "101", "Rohit", "Developer" };
+     employees[2] = new string[] { "102", "Abhi", "Developer" };
+     employees[3] = new string[] { "103", "Samarth", "Tester" };
+ 
+    return employees;
+ }
+}
+```
+**ITarget Interface**:
+
+```
+ public interface ITarget
+ {
+      List<string> GetEmployeeList();
+ }
+```
+
+
+**Client class**:
+
+```
+public class ThirdPartyBillingSystem
+{
+ private ITarget employeeSource;
+ 
+ public ThirdPartyBillingSystem(ITarget employeeSource)
+ {
+ this.employeeSource = employeeSource;
+ }
+ 
+ public void ShowEmployeeList()
+ {
+ List<string> employee = employeeSource.GetEmployeeList();
+ //To DO: Implement you business logic
+ 
+ Console.WriteLine("######### Employee List ##########");
+ foreach (var item in employee)
+ {
+ Console.Write(item); 
+ } 
+ }
+}
+```
+
+**Driver class**:
+
+```
+static void Main(string[] args)
+        {
+        ITarget Itarget = new EmployeeAdapter();
+ ThirdPartyBillingSystem client = new ThirdPartyBillingSystem(Itarget);
+ client.ShowEmployeeList();
+        }
+  ```
+  
+  Output:
+  
+  ![adapterop](https://user-images.githubusercontent.com/49721667/81419405-d20fcb00-916b-11ea-8702-52eda3e5e376.PNG)
+
+**Applications** of adapter pattern:
+
+>1. Allow a system to use classes of another system that is incompatible with it.
+>2. Allow communication between a new and already existing system which are independent of each other
+>3. Ado.Net SqlAdapter, OracleAdapter, MySqlAdapter are the best example of Adapter Pattern.
+
+**Advantages**:
+
+>1. It allows two or more previously incompatible objects to interact.
+>2. It allows reusability of existing functionality.
+
+Code is at:
+[Adapter Pattern](https://github.com/shashanks4/AdapterPattern)
+
+**Proxy Design Pattern**: The proxy pattern falls under **structural design pattern**.
+
+>A proxy, in its most general form, is a class functioning as an interface to something else.
+>It describe how to solve recurring design problems to design flexible and reusable object-oriented software, that is, objects that are easier to implement, change, test, and reuse.
+
+There are various kinds of proxies, some of them are as follows:
+
+**Virtual proxies**: Hand over the creation of an object to another object
+
+**Authentication proxies**: Checks the access permissions for a request
+
+**Remote proxies**: Encodes requests and send them across a network
+
+**Smart proxies**: Change requests before sending them across a network
+
+
+Lets look at UML Class diagram:
+
+![ProxyUML](https://user-images.githubusercontent.com/49721667/81391130-34e86e80-913a-11ea-9869-9ccfe65bb564.PNG)
+
+
+So if look at above UML,
+
+*Subject*: This can be an interface that defines some operations.
+
+*RealSubject*: This is a class which we want to use more efficiently by using proxy class.
+
+*Proxy* : This is a class which holds the instance of RealSubject class and can access RealSubject class members as required.
+
+
+here is the real world example like if we consider Bank as Subject, then it has various details regarding their account holders and many confidential details. RealSubject is like account holder and it has its own credentials. Consider ATM as proxy, so that what ever You need will be accessed over there. rest are basically hidden.
+
+Let us look at code snippet.
+
+Employee class:
+
+```
+ public class Employee
+    {
+         public string Username { get; set; }
+        public string Password { get; set; }
+        public string Role { get; set; }
+        public Employee(string username, string password, string role)
+        {
+            Username = username;
+            Password = password;
+            Role = role;
+    }
+```
+
+Here is **Subject** i.e Interface:
+
+```
+ public interface ISharedFolder
+    {
+         void PerformRWOperations();
+    }
+```
+
+RealSubject:
+
+```
+ public class SharedFolder:ISharedFolder
+    {
+        public void PerformRWOperations()
+        {
+            Console.WriteLine("Performing Read Write operation on the Shared Folder");
+        } 
+    }
+```
+
+Proxy Class:
+
+```
+public class SharedFolderProxy
+    {
+        private ISharedFolder folder;
+        private Employee employee;
+        public SharedFolderProxy(Employee emp)
+        {
+            employee = emp;
+        }
+        public void PerformRWOperations()
+        {
+            if (employee.Role.ToUpper() == "CEO" || employee.Role.ToUpper() =="MANAGER")
+            {
+                folder = new SharedFolder();
+                Console.WriteLine("Shared Folder Proxy makes call to the RealFolder 'PerformRWOperations method'");
+                folder.PerformRWOperations();
+            }
+            else
+            {
+                Console.WriteLine("Shared Folder proxy says 'You don't have permission to access this folder'");
+            }
+        }
+    }
+```
+
+Driver class:
+
+```
+public class Driver
+    {
+        static void Main(string[] args){
+         Console.WriteLine("Client passing employee with Role Developer to folderproxy");
+            Employee emp1 = new Employee("Anurag", "Anurag123", "Developer");
+            SharedFolderProxy folderProxy1 = new SharedFolderProxy(emp1);
+            folderProxy1.PerformRWOperations();
+            Console.WriteLine();
+            Console.WriteLine("Client passing employee with Role Manager to folderproxy");
+            Employee emp2 = new Employee("Pranaya", "Pranaya123", "Manager");
+            SharedFolderProxy folderProxy2 = new SharedFolderProxy(emp2);
+            folderProxy2.PerformRWOperations();
+            Console.Read();
+    }
+}
+```
+
+Here we are making use of proxy class, that has control over other classes. So here it is controlling shared folder class.
+Here is output:
+
+![Proxyop](https://user-images.githubusercontent.com/49721667/81410223-02506d00-915e-11ea-9707-e669f2d75460.PNG)
+
+**Applications** of proxy pattern:
+>1. Objects need to be created on demand means when their operations are requested.
+>2. Access control for the original object is required.
+
+**Advantages**:
+>1. It reduces the need of sub-classing.
+>2. It hides complexities of creating objects.
+
+Here is complete code:
+[Proxy Design Pattern](https://github.com/shashanks4/EmployeeProxy.pattern)
 
 **ProtoType Design Pattern**: The prototype pattern is a **creational design pattern** in software development.
 
