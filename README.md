@@ -4,6 +4,162 @@
 
 
 Welcome to the CSharp-Shashank wiki!
+
+                                                **Dependency Injection**
+                                               
+ DependencyInjection: Dependency injection is a technique in which an object receives other objects that it depends on. These other objects are called dependencies. In the typical "using" relationship the receiving object is called a client and the passed (that is, "injected") object is called a service. But before understanding the Dependency Injection, we need to understand Inversion of control(IoC)the main objective of Inversion of control (IoC) is to remove dependencies between the objects of an application which makes the application more decoupled and maintainable.
+ Dependency Inversion Principle also helps us to achieve loose coupling between the classes. It is highly recommended to use both DIP and IoC together in order to achieve loose coupling between the classes.
+ 
+ IoC design principle suggests the inversion of various types of controls in object-oriented design to achieve loose coupling between the application classes. Here, the control means any extra responsibilities a class has other than its main or fundamental responsibility. For example, control over the flow of an application, control over the dependent object creation, etc.
+ 
+Inorder to include the reference we include some of the containers. These conatiners are unity, autofac and ninject etc.. so by making use these containers we will register, instead of creating the object, we will reference that depenedency.
+Dependency Injection can be implemented in 3 ways:
+1. Constructor Injection
+2. Setter injection
+3. Function Injection
+
+1. Constructor Injection:This is the most commonly used dependency pattern in Object Oriented Programming. The constructor injection normally has only one parameterized constructor, so in this constructor dependency there is no default constructor and we need to pass the specified value at the time of object creation. We can use the injection component anywhere within the class. It addresses the most common scenario where a class requires one or more dependencies.
+
+```
+using System;  
+using System.Collections.Generic;  
+using System.Linq;  
+using System.Text;  
+using System.Threading.Tasks;  
+  
+namespace propertyinjuction  
+{  
+    public interface text  
+    {
+        void print();
+    }
+    class format : text
+    {
+        public void print()
+        {
+            Console.WriteLine(" here is text format");
+        }      
+    }
+    // constructor injection
+    public class constructorinjection
+    {  
+        private text _text;
+        public constructorinjection(text t1)
+        {
+            this._text = t1;          
+        }
+        public void print()
+        {  
+            _text.print();
+        }
+    }
+    class constructor
+    {  
+        static void Main(string[] args)
+        {  
+            constructorinjection cs = new constructorinjection(new format());
+            cs.print();
+            Console.ReadKey();          
+        }
+    }
+}
+```
+
+2. Property Injection: 
+```
+public interface INofificationAction
+{      
+   void ActOnNotification(string message);
+}
+   class A   {  
+       INofificationAction task = null;
+       public void notify(INofificationAction  at ,string messages)
+       {  
+       this.task = at;
+       task.ActOnNotification(messages);    
+       }     
+   }
+   class EventLogWriter : INofificationAction
+   {
+       public void ActOnNotification(string message)
+       {
+           // Write to event log here
+       }
+   }
+   class Program
+   {
+       static void Main(string[] args)
+       {
+           //services srv = new services();
+           //other oth = new other();
+           //oth.run();
+           //Console.WriteLine();
+           EventLogWriter elw = new EventLogWriter();
+           A at = new atul();
+           at.notify(elw, "to logg");
+           Console.ReadKey();
+       }
+   }
+```
+
+3. Method Injection:In method injection we need to pass the dependency in the method only. The entire class does not need the dependency, just the one method. I have a class with a method that has a dependency. I do not want to use constructor injection because then I would be creating the dependent object every time this class is instantiated and most of the methods do not need this dependent object.
+
+
+```
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+  
+namespace propertyinjuction
+{  
+    public interface Iset
+    {
+        void print();      
+    }
+    public class servic : Iset
+    {
+        public void print()
+        {  
+            Console.WriteLine("print........");          
+        }      
+    }
+    public class client
+    {
+        private Iset _set;
+        public void run(Iset serv)
+        {  
+            this._set = serv;
+            Console.WriteLine("start");
+            this._set.print();
+        }      
+    }
+    class method
+    {
+        public static void Main()
+        {
+            client cn = new client();
+            cn.run(new servic());
+            Console.ReadKey();         
+        }
+    }
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                                                   
                                                   Design Patterns
                                      
