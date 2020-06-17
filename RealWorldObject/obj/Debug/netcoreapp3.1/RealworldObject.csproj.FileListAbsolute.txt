@@ -1,0 +1,13 @@
+E:\C#solutions\RealworldObject\obj\Debug\netcoreapp3.1\RealworldObject.csprojAssemblyReference.cache
+E:\C#solutions\RealworldObject\obj\Debug\netcoreapp3.1\RealworldObject.AssemblyInfoInputs.cache
+E:\C#solutions\RealworldObject\obj\Debug\netcoreapp3.1\RealworldObject.AssemblyInfo.cs
+E:\C#solutions\RealworldObject\obj\Debug\netcoreapp3.1\RealworldObject.csproj.CoreCompileInputs.cache
+E:\C#solutions\RealworldObject\bin\Debug\netcoreapp3.1\RealworldObject.exe
+E:\C#solutions\RealworldObject\bin\Debug\netcoreapp3.1\RealworldObject.deps.json
+E:\C#solutions\RealworldObject\bin\Debug\netcoreapp3.1\RealworldObject.runtimeconfig.json
+E:\C#solutions\RealworldObject\bin\Debug\netcoreapp3.1\RealworldObject.runtimeconfig.dev.json
+E:\C#solutions\RealworldObject\bin\Debug\netcoreapp3.1\RealworldObject.dll
+E:\C#solutions\RealworldObject\bin\Debug\netcoreapp3.1\RealworldObject.pdb
+E:\C#solutions\RealworldObject\obj\Debug\netcoreapp3.1\RealworldObject.dll
+E:\C#solutions\RealworldObject\obj\Debug\netcoreapp3.1\RealworldObject.pdb
+E:\C#solutions\RealworldObject\obj\Debug\netcoreapp3.1\RealworldObject.genruntimeconfig.cache
