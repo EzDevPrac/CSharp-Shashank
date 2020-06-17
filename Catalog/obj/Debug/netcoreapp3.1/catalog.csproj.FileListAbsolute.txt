@@ -1,0 +1,13 @@
+E:\C#solutions\catalog\obj\Debug\netcoreapp3.1\catalog.csprojAssemblyReference.cache
+E:\C#solutions\catalog\obj\Debug\netcoreapp3.1\catalog.AssemblyInfoInputs.cache
+E:\C#solutions\catalog\obj\Debug\netcoreapp3.1\catalog.AssemblyInfo.cs
+E:\C#solutions\catalog\obj\Debug\netcoreapp3.1\catalog.csproj.CoreCompileInputs.cache
+E:\C#solutions\catalog\bin\Debug\netcoreapp3.1\catalog.exe
+E:\C#solutions\catalog\bin\Debug\netcoreapp3.1\catalog.deps.json
+E:\C#solutions\catalog\bin\Debug\netcoreapp3.1\catalog.runtimeconfig.json
+E:\C#solutions\catalog\bin\Debug\netcoreapp3.1\catalog.runtimeconfig.dev.json
+E:\C#solutions\catalog\bin\Debug\netcoreapp3.1\catalog.dll
+E:\C#solutions\catalog\bin\Debug\netcoreapp3.1\catalog.pdb
+E:\C#solutions\catalog\obj\Debug\netcoreapp3.1\catalog.dll
+E:\C#solutions\catalog\obj\Debug\netcoreapp3.1\catalog.pdb
+E:\C#solutions\catalog\obj\Debug\netcoreapp3.1\catalog.genruntimeconfig.cache
