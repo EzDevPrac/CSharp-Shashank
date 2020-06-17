@@ -1,0 +1,13 @@
+E:\C#solutions\Mathematics\obj\Debug\netcoreapp3.1\mathematics.csprojAssemblyReference.cache
+E:\C#solutions\Mathematics\obj\Debug\netcoreapp3.1\mathematics.AssemblyInfoInputs.cache
+E:\C#solutions\Mathematics\obj\Debug\netcoreapp3.1\mathematics.AssemblyInfo.cs
+E:\C#solutions\Mathematics\obj\Debug\netcoreapp3.1\mathematics.csproj.CoreCompileInputs.cache
+E:\C#solutions\Mathematics\bin\Debug\netcoreapp3.1\mathematics.exe
+E:\C#solutions\Mathematics\bin\Debug\netcoreapp3.1\mathematics.deps.json
+E:\C#solutions\Mathematics\bin\Debug\netcoreapp3.1\mathematics.runtimeconfig.json
+E:\C#solutions\Mathematics\bin\Debug\netcoreapp3.1\mathematics.runtimeconfig.dev.json
+E:\C#solutions\Mathematics\bin\Debug\netcoreapp3.1\mathematics.dll
+E:\C#solutions\Mathematics\bin\Debug\netcoreapp3.1\mathematics.pdb
+E:\C#solutions\Mathematics\obj\Debug\netcoreapp3.1\mathematics.dll
+E:\C#solutions\Mathematics\obj\Debug\netcoreapp3.1\mathematics.pdb
+E:\C#solutions\Mathematics\obj\Debug\netcoreapp3.1\mathematics.genruntimeconfig.cache
