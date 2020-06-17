@@ -1,0 +1,13 @@
+E:\C#solutions\Tables2\obj\Debug\netcoreapp3.1\tables2.csprojAssemblyReference.cache
+E:\C#solutions\Tables2\obj\Debug\netcoreapp3.1\tables2.AssemblyInfoInputs.cache
+E:\C#solutions\Tables2\obj\Debug\netcoreapp3.1\tables2.AssemblyInfo.cs
+E:\C#solutions\Tables2\obj\Debug\netcoreapp3.1\tables2.csproj.CoreCompileInputs.cache
+E:\C#solutions\Tables2\bin\Debug\netcoreapp3.1\tables2.exe
+E:\C#solutions\Tables2\bin\Debug\netcoreapp3.1\tables2.deps.json
+E:\C#solutions\Tables2\bin\Debug\netcoreapp3.1\tables2.runtimeconfig.json
+E:\C#solutions\Tables2\bin\Debug\netcoreapp3.1\tables2.runtimeconfig.dev.json
+E:\C#solutions\Tables2\bin\Debug\netcoreapp3.1\tables2.dll
+E:\C#solutions\Tables2\bin\Debug\netcoreapp3.1\tables2.pdb
+E:\C#solutions\Tables2\obj\Debug\netcoreapp3.1\tables2.dll
+E:\C#solutions\Tables2\obj\Debug\netcoreapp3.1\tables2.pdb
+E:\C#solutions\Tables2\obj\Debug\netcoreapp3.1\tables2.genruntimeconfig.cache
